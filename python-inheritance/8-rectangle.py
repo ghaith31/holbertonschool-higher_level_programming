@@ -1,19 +1,31 @@
 #!/usr/bin/python3
-"""
-A class named rectangle that inherits from BaseGeometry
-"""
-BaseGeometry = __import__("7-base_geometry").BaseGeometry
+
+"""Create an empty class named BaseGeometry."""
+
+BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
 
 
 class Rectangle(BaseGeometry):
-    """
-    A new derivative of BaseGeo
-    """
+
+    """define the fields and methods here"""
+
+
     def __init__(self, width, height):
+
+        """ Rectangle Constructor.
+
+
+            args:
+
+                size:size of the square
+
         """
-        Famous constructor
-        """
-        super().integer_validator("width", width)
-        super().integer_validator("height", height)
-        self.__height = height
+
+        self.integer_validator("width", width)
+
         self.__width = width
+
+        self.integer_validator("height", height)
+
+        self.__height = height
