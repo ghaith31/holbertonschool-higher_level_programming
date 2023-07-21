@@ -1,32 +1,31 @@
 #!/usr/bin/python3
-"""
-Finally a complete rectangle.. YES.
-"""
-BaseGeometry = __import__("7-base_geometry").BaseGeometry
+# 9-rectangle.py
+# Brennan D Baraban <375@holbertonschool.com>
+"""Defines a class Rectangle that inherits from BaseGeometry."""
+BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
 
 class Rectangle(BaseGeometry):
-    """
-    A new derivative of BaseGeo
-    """
+    """Represent a rectangle using BaseGeometry."""
 
     def __init__(self, width, height):
-        """
-        Famous constructor
+        """Intialize a new Rectangle.
+
+        Args:
+            width (int): The width of the new Rectangle.
+            height (int): The height of the new Rectangle.
         """
         super().integer_validator("width", width)
+        self.__width = width
         super().integer_validator("height", height)
         self.__height = height
-        self.__width = width
 
     def area(self):
-        """
-        WIP
-        """
+        """Return the area of the rectangle."""
         return self.__width * self.__height
 
     def __str__(self):
-        """
-        returns the object as a nice str
-        """
-        return "[Rectangle] {}/{}".format(self.__width, self.__height)
+        """Return the print() and str() representation of a Rectangle."""
+        string = "[" + str(self.__class__.__name__) + "] "
+        string += str(self.__width) + "/" + str(self.__height)
+        return string

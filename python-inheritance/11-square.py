@@ -1,30 +1,19 @@
 #!/usr/bin/python3
-"""
-Fully functioning square
-"""
-Rectangle = __import__("9-rectangle").Rectangle
-GeometryBase = __import__("7-base_geometry").BaseGeometry
+# 11-square.py
+# Brennan D Baraban <375@holbertonschool.com>
+"""Defines a Rectangle subclass Square."""
+Rectangle = __import__('9-rectangle').Rectangle
+
 
 class Square(Rectangle):
-    """
-    Just a square m8
-    """
+    """Represent a square."""
+
     def __init__(self, size):
+        """Initialize a new square.
+
+        Args:
+            size (int): The size of the new square.
         """
-        initializer
-        """
-        self.__size = size
-        super().integer_validator("size", size)
+        self.integer_validator("size", size)
         super().__init__(size, size)
-
-    def area(self):
-        """
-        Area returner
-        """
-        return self.__size ** 2
-
-    def __str__(self):
-        """
-        Same shit as before
-        """
-        return "[Square] {}/{}".format(self.__size, self.__size)
+        self.__size = size

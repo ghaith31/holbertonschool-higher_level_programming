@@ -1,12 +1,12 @@
 #!/usr/bin/python3
-"""
-Improvements have been made
-"""
+# 6-base_geometry.py
+# Brennan D Baraban <375@holbertonschool.com>
+"""Defines a base geometry class BaseGeometry."""
 
 
 class BaseGeometry:
-    """
-    A class with an aream method
-    """
+    """Represent base geometry."""
+
     def area(self):
+        """Not implemented."""
         raise Exception("area() is not implemented")
